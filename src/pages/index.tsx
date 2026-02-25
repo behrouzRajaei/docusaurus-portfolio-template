@@ -1,48 +1,27 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+export default function Home() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/guides/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-          <></>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/projects/overview">
-            To my Projects
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+    <Layout title="Juice Shop Documentation">
+      <main style={{ padding: '4rem', textAlign: 'center' }}>
+        <h1>OWASP Juice Shop Documentation</h1>
+        <p>This documentation contains my completed challenges and explanations.</p>
+        <Link
+          to="/docs/intro"
+          style={{
+            display: 'inline-block',
+            marginTop: '2rem',
+            padding: '0.8rem 2rem',
+            backgroundColor: '#266AD9',
+            color: 'white',
+            borderRadius: '8px',
+            textDecoration: 'none'
+          }}
+        >
+          Go to Documentation
+        </Link>
       </main>
     </Layout>
   );

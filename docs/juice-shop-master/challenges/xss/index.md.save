@@ -1,0 +1,92 @@
+# Client-side XSS Challenge
+
+:::warning Educational Use Only
+
+This challenge is documented strictly for educational and ethical purposes within the OWASP Juice Shop training environment only.
+
+Do NOT attempt this on real systems.
+
+:::
+
+This challenge demonstrates how client-side input validation can be bypassed in the OWASP Juice Shop application. By intercepting and modifying the registration request, malicious input can be injected and executed in the browser.
+
+## Prerequisites
+
+To complete this challenge, the following requirements must be fulfilled:
+
+- OWASP Juice Shop is running locally on http://localhost:3000
+- Burp Suite is installed and configured as a proxy
+- Browser traffic is routed through Burp Suite
+- Basic understanding of HTTP requests and client-side validation
+
+### 1. Client-side XSS Protection
+
+#### Category:
+
+Cross-Site Scripting (XSS) / Client-Side Input Validation
+
+## Prerequisites
+
+- OWASP Juice Shop running locally or on a VM
+- Web browser (Chrome or Firefox recommended)
+- Basic knowledge of web security concepts
+- Browser developer tools access (F12)
+
+## Step-by-Step Exploitation
+
+1. Open the Juice Shop application
+2. Navigate to...
+3. Enter the following payload:
+   ```html
+   <script>alert(1)</script>
+
+#### Exploitation Steps
+
+1. Register a new user inside Juice Shop but before clicking “Register,” turn on Intercept in Burp Suite.
+
+2. Click Register, allowing Burp to intercept the POST /api/user request.
+
+3. Send the intercepted request to Repeater.
+
+4. From the Scoreboard hint, copy the provided payload:
+```
+'<iframe src="javascript:alert(`xss`)">'
+```
+5. Replace the email field in the JSON request with this payload.
+
+6. Escape internal quotes to keep JSON valid:
+```
+'<iframe src=\"javascript:alert(`xss`)\">'
+```
+7. Click Send in Repeater to forward the modified request.
+
+8. The browser processes the injected payload, triggering the XSS and solving the challenge.
+
+#### Risks & Impact
+
+- Execution of arbitrary JavaScript in a victim’s browser
+
+- Session hijacking
+
+- Account takeover
+
+- Phishing, redirects, or keylogging
+
+- Full compromise of user interaction inside the application
+
+#### Result
+
+The challenge is solved once the JavaScript alert executes successfully, proving that client-side protection was bypassed.
+
+#### Challenge Video
+
+[Client-side XSS Protection — Video Link](https://www.loom.com/share/53404102561e450685a398f69a681a15)
+## Proof of Concept
+
+The following screenshots confirm successful completion of the Client-side XSS Protection challenge.
+
+### XSS Payload injected
+![XSS Payload](./screenshots/xss-payload.png)
+
+### JavaScript execution in browser
+![Alert triggered](./screenshots/xss-alert.png)

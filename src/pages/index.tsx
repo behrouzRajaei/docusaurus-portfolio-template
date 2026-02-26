@@ -1,27 +1,16 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 
-export default function Home() {
+export default function PortfolioHome() {
   return (
-    <Layout title="Juice Shop Documentation">
-      <main style={{ padding: '4rem', textAlign: 'center' }}>
-        <h1>OWASP Juice Shop Documentation</h1>
-        <p>This documentation contains my completed challenges and explanations.</p>
-        <Link
-          to="/docs/intro"
-          style={{
-            display: 'inline-block',
-            marginTop: '2rem',
-            padding: '0.8rem 2rem',
-            backgroundColor: '#266AD9',
-            color: 'white',
-            borderRadius: '8px',
-            textDecoration: 'none'
-          }}
-        >
-          Go to Documentation
-        </Link>
+    <Layout title="Behrouz Rajaei | Portfolio">
+      <main style={{ padding: '4rem 2rem', textAlign: 'center' }}>
+        <h1>Behrouz Rajaei</h1>
+        <h2>DevOps Engineer</h2>
+        <p>
+          Welcome to my portfolio. Here you can find my projects, skills,
+          and professional background.
+        </p>
       </main>
     </Layout>
   );

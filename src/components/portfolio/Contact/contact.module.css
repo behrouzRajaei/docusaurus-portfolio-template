@@ -1,0 +1,111 @@
+.section {
+  width: 100%;
+  height: 400px;
+  padding: 72px 120px;
+  background: #262E34;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* HEADLINE */
+.headlineRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/* CONTENT */
+.contentRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* TEXT */
+.text {
+  width: 706px;
+}
+
+.text p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: justify;
+  color: #FFFFFF;
+}
+
+/* CONTACTS */
+.contacts {
+  width: 248px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Mail */
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconBox {
+  width: 28px;
+  height: 28px;
+  background: #266AD9;
+  border-radius: 0%;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.iconCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 0%;
+  background: #266AD9;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.contactItem span,
+.contactItem a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.contactItem a {
+  text-decoration: underline;
+}
+

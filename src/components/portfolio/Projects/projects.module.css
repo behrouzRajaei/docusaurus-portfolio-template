@@ -1,0 +1,227 @@
+.section {
+  width: 100%;
+  height: 669px;
+  padding: 72px 120px;
+  background: #266AD9;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+/* ================= LAYOUT ================= */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ================= LEFT LIST ================= */
+
+.left {
+  width: 256px;
+  height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projectItem {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  line-height: 30px;
+}
+
+.projectItem:hover {
+  color: #000000;
+}
+
+/* Scroll style */
+.left::-webkit-scrollbar {
+  width: 4px;
+}
+
+.left::-webkit-scrollbar-thumb {
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  width: 923px;
+  height: 400px;
+  background: #2F4563;
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* ================= TOP SECTION ================= */
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.projectTitle {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ================= SKILLS ================= */
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.skillItem {
+  width: 100px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillItem img {
+  width: 100px;
+  height: 45px;
+  object-fit: contain;
+  background: #FFFFFF;
+  padding: 0 4px;
+  border-radius: 10px;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+}
+
+/* Project Image */
+
+.image {
+  width: 360px;
+  height: 230px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* ================= TEXT ================= */
+
+.text {
+  width: 456px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding-bottum: 20px;
+}
+
+.text p {
+  color: #FFFFFF;
+  line-height: 1.7;
+  text-align: justify;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 6px;
+}
+
+/* Scroll for description */
+.text p::-webkit-scrollbar {
+  width: 4px;
+}
+
+.text p::-webkit-scrollbar-thumb {
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+/* Fade effect */
+.text::after {
+  content: "";
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(47, 69, 99, 0),
+    rgba(47, 69, 99, 1)
+  );
+  pointer-events: none;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+  display: flex;
+  gap: 42px;
+  margin-top: auto;
+}
+
+.primary {
+  background: #266AD9;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.primary:hover {
+  background: #1e56b8;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  border-radius: 30px;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.secondary:hover {
+  background: #FFFFFF;
+  color: #2F4563;
+}
+
+.disabledButton {
+  background: #555;
+  border: 1px solid #777;
+  color: #ccc;
+  border-radius: 30px;
+  padding: 12px 28px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+

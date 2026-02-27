@@ -1,0 +1,83 @@
+.hero {
+  width: 100%;
+  min-height: 635px;
+  padding: 140px 120px 72px 120px; /* فضای بالا برای Header */
+  display: flex;
+  justify-content: center;
+  background: #266AD9;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.textBlock {
+  max-width: 664px;
+}
+
+/* سطر اول */
+.titleLine1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* نام - تنها h1 صفحه */
+.name {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* سطر سوم */
+.subtitle {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin: 10px 0 0 0;
+}
+
+/* متن معرفی */
+.description {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* دکمه */
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  background: #FFFFFF;
+  color: #266AD9;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+}
+
+/* تصویر */
+.imageBlock img {
+  width: 441px;
+  height: 550px;
+  border-radius: 30px;
+  object-fit: cover;
+}

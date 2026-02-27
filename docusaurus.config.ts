@@ -72,76 +72,18 @@ const config: Config = {
     ],
   ],
 
-  themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
-        {
-          href: 'https://github.com/spmse/dev-blog-template',
-          label: 'Github',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Juice shop Docs',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            }
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-      additionalLanguages: ['powershell', 'hcl'],
-      magicComments: [
-        // Remember to extend the default highlight class name as well!
+themeConfig: {
+// Replace with your project's social card
+  image: 'img/docusaurus-social-card.jpg',
+  colorMode: {
+    disableSwitch: true,
+  },
+  prism: {
+    theme: prismThemes.github,
+    darkTheme: prismThemes.dracula,
+    additionalLanguages: ['powershell', 'hcl'],
+    magicComments: [
+ //     Remember to extend the default highlight class name as well!
         {
           className: 'theme-code-block-highlighted-line',
           line: 'highlight-next-line',
@@ -153,18 +95,18 @@ const config: Config = {
         },
       ],
     },
-  } satisfies Preset.ThemeConfig,
-};
+   } satisfies Preset.ThemeConfig,
+ };
 
 
 if (blogEnabled) {
   (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
   (
-    config.themeConfig.footer as any
-  ).links[2].items.push({
-    to: '/blog',
-    label: 'Blog',
-  });
-}
+  config.themeConfig.footer as any
+ ).links[2].items.push({
+ to: '/blog',
+  label: 'Blog',
+ });
+ }
 
 export default config;

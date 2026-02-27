@@ -1,0 +1,68 @@
+.footer {
+  width: 100%;
+  height: 463px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #262E34;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.arrowButton {
+  width: 40px;
+  height: 90px;
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.arrowIcon {
+  width: 40px;
+  height: 90px;
+}
+
+/* Default colors */
+.arrowBorder {
+  stroke: white;
+  fill: transparent;
+  transition: all 0.5s ease-out;
+}
+
+.arrowPath {
+  fill: white;
+  transition: all 0.5s ease-out;
+}
+
+/* Hover effect */
+.arrowButton:hover .arrowBorder {
+  fill: #266AD9;
+  stroke: #266AD9;
+}
+
+.arrowButton:hover .arrowPath {
+  fill: white;
+}
+
+.content {
+  width: 145px;
+  height: 53px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  color: #FFFFFF;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+}

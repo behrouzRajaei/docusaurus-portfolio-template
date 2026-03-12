@@ -90,15 +90,10 @@ Before running the project, ensure you have:
 
 ### 1. Client-side XSS Protection
 
-- [XSS Challenge](./challenges/xss/index.md)
-
 ### 2. CAPTCHA Bypass challenge
-
-- [CAPTCHA Challenge](./challenges/captcha/index.md)
 
 ### 3. Admin Registration challenge
 
-- [Admin Challenge](./challenges/admin/index.md)
 
 ## Checklist
 

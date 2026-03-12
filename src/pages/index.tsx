@@ -10,16 +10,17 @@ import Footer from '../components/portfolio/Footer';
 
 export default function PortfolioHome() {
   return (
-    <Layout 
+    <Layout
       title="Behrouz Rajaei | Portfolio"
-      noFooter
     >
-      <Header />
-      <Hero />
-      <MySkills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div className="pageWrapper">
+        <Header />
+        <Hero />
+        <MySkills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </Layout>
   );
 }

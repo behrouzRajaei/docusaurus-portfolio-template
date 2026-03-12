@@ -4,100 +4,103 @@ import styles from "./projects.module.css";
 
 const projects = [
   {
-    name: "1. V-Server Setup",
+    name: "V-Server Setup",
     image: "/img/projects/vserver.svg",
     skills: ["security.svg", "shell.svg"],
     description:
-      "Configured and secured a virtual server environment with SSH hardening, firewall rules, and system monitoring.",
-    documentation: "https://github.com/behrouzRajaei/v-server-setup#readme",
+      "Secure Linux virtual server setup focusing on system hardening and infrastructure security. Implemented SSH hardening, firewall configuration, and monitoring to reduce attack surface and improve remote administration practices in a controlled server environment.",
+    documentation: "documentation/projects/v-setup-server",
     github: "https://github.com/behrouzRajaei/v-server-setup"
   },
   {
-    name: "2. Baby Tools Shop",
+    name: "Baby Tools",
     image: "/img/projects/baby.svg",
-    skills: ["docker.svg", "shell.svg"],
+    skills: ["python.svg", "docker.svg", "shell.svg"],
     description:
-      "A simple Django-based web application for managing a baby tools shop. The project is containerized with Docker and follows clean code conventions.",
-    documentation: "https://github.com/behrouzRajaei/baby-tools-shop#readme",
+      "Containerized Django web application for managing a small online shop. The project demonstrates backend development combined with Docker-based deployment, environment configuration, and reproducible application setup for consistent development and testing environments.",
+    documentation: "documentation/projects/baby-tools",
     github: "https://github.com/behrouzRajaei/baby-tools-shop"
   },
   {
-    name: "3. Truck Signs API",
+    name: "Truck Signs",
     image: "/img/projects/truck.svg",
     skills: ["docker.svg", "shell.svg", "python.svg"],
     description:
-      "An online store backend built with Django and Django REST Framework for selling and customizing truck vinyl signs. The system allows administrators to manage categories, products, lettering items, and customer orders, while exposing a REST API for frontend or external integrations.",
-    documentation: "https://github.com/behrouzRajaei/truck_signs_api#readme",
+      "REST API backend developed with Django and Django REST Framework for managing customizable truck sign products and customer orders. The project focuses on modular backend architecture, structured API endpoints, and scalable data management for integration with frontend systems.",
+    documentation: "documentation/projects/truck-sign-api",
     github: "https://github.com/behrouzRajaei/truck_signs_api"
   },
   {
-    name: "4. Juice Shop Meister",
-    image: "/img/projects/juiceshop.png",
+    name: "Juice Shop",
+    image: "/img/projects/juice.svg",
     skills: ["security.svg", "python.svg"],
     description:
-      "This project contains my completed hacking challenges from the OWASP Juice Shop application. The content of this repository is provided solely for educational and ethical security research purposes.",
-    documentation: "https://github.com/behrouzRajaei/juice-shop-docusaurus#readme",
+      "Documentation of completed OWASP Juice Shop security challenges. The project analyzes common web vulnerabilities such as XSS, authentication flaws, and access control issues while explaining exploitation techniques and the security concepts behind each challenge.",
+    documentation: "documentation/projects/juice-shop",
     github: "https://github.com/behrouzRajaei/juice-shop-docusaurus"
   },
   {
-    name: "5. Wordpress",
-    image: "/img/projects/wordpress.svg",
-    skills: ["shell.svg", "docker.svg"],
-    description:
-      "This repository contains a Docker-based setup for running WordPress with a MySQL database. The project demonstrates how to run WordPress in a reproducible way using Docker Compose with persistent storage and environment configuration.",
-    documentation: "https://github.com/behrouzRajaei/wordpress-docker#readme",
-    github: "https://github.com/behrouzRajaei/wordpress-docker"
-  },
-  {
-    name: "6. Conduit Container",
-    image: "/img/projects/conduit_docker.svg",
-    skills: ["shell.svg", "docker.svg", "yaml.svg"],
-    description:
-      "A fully dockerized implementation of the RealWorld / Conduit application using Django (REST Framework) for the backend and Angular for the frontend. The project follows a modular architecture and is designed to be deployed easily using Docker and Docker Compose.",
-    documentation: "https://github.com/behrouzRajaei/conduit-container#readme",
-    github: "https://github.com/behrouzRajaei/conduit-container"
-  },
-  {
-    name: "7. Minecraft-Server",
+    name: "Minecraft",
     image: "/img/projects/minecraft.svg",
     skills: ["shell.svg", "docker.svg", "yaml.svg"],
     description:
-      "This repository contains a fully dockerized Minecraft Java Edition server. The project is designed to run a Minecraft server inside a Docker container without using any pre-built images.",
-    documentation: "https://github.com/behrouzRajaei/minecraft-docker-server-new#readme",
+      "Dockerized Minecraft Java Edition server built without relying on pre-built container images. The environment was configured from scratch to demonstrate container creation, service deployment, and reproducible infrastructure for hosting game servers.",
+    documentation: "documentation/projects/minecraft",
     github: "https://github.com/behrouzRajaei/minecraft-docker-server-new"
   },
   {
-    name: "8. Conduit Deployment",
+    name: "WordPress",
+    image: "/img/projects/wordpress.svg",
+    skills: ["shell.svg", "docker.svg"],
+    description:
+      "Docker-based WordPress hosting environment with a MySQL database and persistent storage. The project demonstrates how containerization simplifies application deployment, environment configuration, and reproducible infrastructure setups for web applications.",
+    documentation: "documentation/projects/wordpress",
+    github: "https://github.com/behrouzRajaei/wordpress-docker"
+  },
+  {
+    name: "Conduit Container",
+    image: "/img/projects/conduit_docker.svg",
+    skills: ["python.svg", "shell.svg", "docker.svg", "yaml.svg"],
+    description:
+      "Fully containerized RealWorld Conduit application using a Django REST backend and Angular frontend. The project demonstrates modular service architecture and Docker-based orchestration, enabling consistent development environments and simplified deployment workflows.",
+    documentation: "documentation/projects/conduit-container",
+    github: "https://github.com/behrouzRajaei/conduit-containe"
+  },
+  {
+    name: "Conduit Deployment",
     image: "/img/projects/conduit_deploy.svg",
     skills: ["cicd.svg", "shell.svg", "docker.svg", "yaml.svg"],
     description:
-      "A CI/CD pipeline implementation using GitHub Actions for automated deployment of a dockerized Conduit application.",
-    documentation: "https://github.com/behrouzRajaei/Conduit-Deployment#readme",
-    github: "https://github.com/behrouzRajaei/Conduit-Deployment"
+      "Automated CI/CD pipeline for deploying a containerized application using GitHub Actions. The workflow builds, tests, and deploys Docker images automatically, demonstrating DevOps practices that improve deployment reliability and reduce manual operations.",
+    documentation: "documentation/projects/conduit-deployment",
+    github: "https://github.com/behrouzRajaei/Conduit-Deployme"
   },
+
   {
-    name: "9. Docusaurus-Portfolio",
+
+    name: "Docusaurus Portfolio",
     image: "/img/projects/porfolio.png",
     skills: ["css.svg", "docusaurus.svg"],
     description:
-      "Developed a responsive portfolio using Docusaurus with structured content and modern UI.",
-    documentation: "https://github.com/behrouzRajaei/docusaurus-portfolio#readme",
-    github: "https://github.com/behrouzRajaei/docusaurus-portfolio"
+      "Personal developer portfolio built with Docusaurus to present projects, documentation, and DevOps experience. The site combines structured documentation with a responsive interface to showcase technical work and development practices.",
+    documentation: "documentation/projects/docusaurus-portfolio",
+    github: "https://github.com/behrouzRajaei/docusaurus-portf"
   },
   {
-    name: "10. CV",
+    name: "CV",
     image: "/img/projects/cv.png",
     skills: ["html.svg", "css.svg"],
     description:
-      "Designed and built a personal CV using HTML and CSS with a clean and responsive layout.",
-    documentation: null,
-    github: null
+      "Responsive personal CV website created using HTML and CSS to present professional experience, projects, and technical skills. The project focuses on clean layout design, structured content presentation, and responsive styling for different screen sizes.",
+    documentation: "documentation/projects/cv",
+    github: "https://github.com/behrouzRajaei/cv"
   }
 ];
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(projects[0]);
+  const [selectedProject, setSelectedProject] = useState(projects[3]);
   const baseUrl = useBaseUrl("/");
+  const [showAll, setShowAll] = useState(false);
 
   return (
     <section id="projects" className={styles.section}>
@@ -105,23 +108,47 @@ export default function Projects() {
 
       <div className={styles.container}>
 
+        {/* LEFT LIST */}
         <div className={styles.left}>
-          {projects.map((project, index) => (
-            <p
-              key={index}
-              className={styles.projectItem}
-              onClick={() => setSelectedProject(project)}
-            >
-              {project.name}
-            </p>
-          ))}
+          <ol className={styles.projectList}>
+            {(showAll ? projects : projects.slice(0, 5)).map((project, index) => (
+
+              <li
+                key={index}
+                className={`${styles.projectItem} ${
+                  selectedProject === project ? styles.active : ""
+                } ${showAll ? styles.compactItem : ""}`}
+                onClick={() => setSelectedProject(project)}
+              >
+                {project.name}
+              </li>
+
+            ))}
+          </ol>
+
+          <div
+            className={styles.seeMore}
+            onClick={() => setShowAll(!showAll)}
+          >
+            <div className={styles.arrowBox}>
+              <img
+                src={useBaseUrl("/img/projects/arrow_top_right.svg")}
+                alt="arrow"
+              />
+            </div>
+            <span className={styles.seeMoreText}>
+              see more projects
+            </span>
+          </div>
         </div>
 
+        {/* PROJECT CARD */}
         <div className={styles.card}>
 
+          {/* TOP */}
           <div className={styles.top}>
             <h3 className={styles.projectTitle}>
-              {selectedProject.name}
+              Project {selectedProject.name}
             </h3>
 
             <div className={styles.skills}>
@@ -136,6 +163,7 @@ export default function Projects() {
             </div>
           </div>
 
+          {/* CONTENT */}
           <div className={styles.content}>
             <img
               src={`${baseUrl}${selectedProject.image.replace("/img/", "img/")}`}
@@ -147,25 +175,16 @@ export default function Projects() {
               <p>{selectedProject.description}</p>
 
               <div className={styles.buttons}>
-                {selectedProject.documentation ? (
+                {selectedProject.documentation && (
                   <a
-                    href={selectedProject.documentation}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={useBaseUrl(selectedProject.documentation)}
                     className={styles.primary}
                   >
                     Documentation
                   </a>
-                ) : (
-                  <button
-                    className={`${styles.primary} ${styles.disabledButton}`}
-                    disabled
-                  >
-                    Coming Soon
-                  </button>
                 )}
 
-                {selectedProject.github ? (
+                {selectedProject.github && (
                   <a
                     href={selectedProject.github}
                     target="_blank"
@@ -174,16 +193,8 @@ export default function Projects() {
                   >
                     GitHub
                   </a>
-                ) : (
-                  <button
-                    className={`${styles.secondary} ${styles.disabledButton}`}
-                    disabled
-                  >
-                    Coming Soon
-                  </button>
                 )}
               </div>
-
             </div>
           </div>
 

@@ -1,26 +1,43 @@
 .hero {
   width: 100%;
-  min-height: 635px;
-  padding: 140px 120px 72px 120px; /* فضای بالا برای Header */
+  height: 635px;
   display: flex;
   justify-content: center;
   background: #266AD9;
+  margin-top: 109px;
 }
 
 .content {
+  width: 1440px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  align-items: flex-start;
+  padding: 60px 120px 72px 120px;
 }
 
 .textBlock {
-  max-width: 664px;
+  width: 664px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;	
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* فاصله بین title ها */
+  margin-bottom: 40px;
+  margin-top: -30px;
+}
+
+.description {
+  margin-bottom: 40px;
 }
 
 /* سطر اول */
 .titleLine1 {
   font-family: 'Quicksand', sans-serif;
+  line-height: 120%;
   font-weight: 400;
   font-size: 32px;
   line-height: 120%;
@@ -28,7 +45,7 @@
   margin: 0;
 }
 
-/* نام - تنها h1 صفحه */
+/* نام */
 .name {
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
@@ -38,46 +55,68 @@
   margin: 0;
 }
 
-/* سطر سوم */
+/* شغل */
 .subtitle {
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 120%;
   color: #FFFFFF;
-  margin: 10px 0 0 0;
+  margin: 0;
 }
 
-/* متن معرفی */
+/* توضیح */
 .description {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 22px;
   line-height: 120%;
   color: #FFFFFF;
-  margin-top: 20px;
+  margin: 0;
   text-align: justify;
+  text-justify: inter-word;
 }
 
 /* دکمه */
 .button {
-  display: inline-block;
-  margin-top: 30px;
+  width: 151px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #FFFFFF;
   color: #266AD9;
+
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  line-height: 120%;
+
+  border-radius: 30px;
+  border: none;
+
   text-decoration: none;
-  border-radius: 6px;
-  padding: 10px 24px;
+  transition: background-color 0.3s ease;
+}
+
+.button,
+.button:visited,
+.button:hover,
+.button:active {
+  color: #266AD9 !important;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #F8F5EC; /* سفید کمی کدر */
 }
 
 /* تصویر */
 .imageBlock img {
-  width: 441px;
-  height: 550px;
+  width: 441.62px;
+  height: 479px;
   border-radius: 30px;
   object-fit: cover;
+  object-position: center top;
 }

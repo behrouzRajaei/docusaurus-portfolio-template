@@ -38,8 +38,8 @@ export default function Footer() {
       </button>
 
       <div className={styles.content}>
-        <p>© {new Date().getFullYear()}</p>
-        <p>Behrouz Rajaei</p>
+        <p>© Behrouz Rajaei {new Date().getFullYear()}</p>
+        <a href="documentation/legal-notice">Legal notice</a>
       </div>
 
     </footer>

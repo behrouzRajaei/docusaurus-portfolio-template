@@ -1,6 +1,6 @@
 .skillsSection {
-  width: 100%;
-  min-height: 929px;
+  width: 1440px;
+  height: 929px;
   padding: 72px 120px;
   background: #1E2A34;
   display: flex;
@@ -9,14 +9,25 @@
 }
 
 .title {
+  width: 504px;
+  height: 77px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
   font-size: 64px;
+  line-height: 120%;
+  letter-spacing: 0%;
   color: #FFFFFF;
   margin: 0;
+  margin-top: -60px;
+}
+
+.section {
+  padding-top: 40px;
 }
 
 .groupsWrapper {
+  width: 1199px;
+  height: 668px;
   display: flex;
   flex-direction: column;
   gap: 34px;
@@ -24,126 +35,136 @@
 
 .row {
   display: flex;
-  justify-content: center;
   gap: 34px;
 }
 
-/* ✅ سایز دقیق فیگما */
 .card {
-  position: relative;
-  width: 400px;
-  height: 250px;
-  border-radius: 5px;
-  border: 1px dashed #9747FF;
-  background: #27313A;
+  width: 377px;
+  height: 200px;
+  padding: 42px 71px;
+  border-radius: 30px;
+  background: rgba(145, 201, 243, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover {
+  background: #79B8FF80;
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* ✅ آیکن بزرگ‌تر (متعادل) */
 .icon {
-  position: absolute;
-  width: 100px;   /* 👈 بزرگ‌تر شد */
-  height: 100px;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   object-fit: contain;
-  opacity: 1;
+  object-position: center;
+
+  transform: translateY(-15px);  /* بالا آمدن آیکن */
   z-index: 1;
-  transition: all 0.3s ease;
-}
-
-/* ✅ hover آیکن */
-.card:hover .icon {
-  width: 150px;
-  height: 150px;
-  opacity: 0.25;
-  transform: scale(1.2);
-}
-
-/* متن توضیحات */
-.hoverText {
-  position: absolute;
-  width: 80%;
-  text-align: justify;
-  color: #FFFFFF;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  letter-spacing: 0.2px;
-
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-
-  max-height: 70%;
-  overflow-y: auto;
-  padding-right: 8px;
-}
-
-/* نمایش متن */
-.card:hover .hoverText {
-  opacity: 1;
-}
-
-/* fade نرم */
-.hoverText::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 25px;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(30, 42, 52, 0),
-    rgba(30, 42, 52, 0.7)
-  );
-
-  pointer-events: none;
-}
-
-/* اسم مهارت */
-.skillName {
-  position: absolute;
-  bottom: 20px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: #FFFFFF;
-  z-index: 2;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* مخفی شدن اسم */
+.card:hover .icon {
+  opacity: 0;
+}
+
+.hoverList { /* توضیحات هر اسکیل*/
+  font-family: Quicksand;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 120%;
+  letter-spacing: 0%;
+
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+
+  color: #FFFFFF;
+
+  text-align: left;
+}
+
+.hoverList li {
+  margin-bottom: 6px;
+}
+
+.card:hover .hoverList {
+  opacity: 1;
+}
+
+.skillName {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFFFFF;
+  margin: 0;
+  transition: opacity 0.3s ease;
+  font-family: Quicksand;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 120%;
+  letter-spacing: 0%;
+  width: 80%;
+  text-align: center;
+  word-break: break-word;
+  z-index: 2;
+  white-space: pre-line;
+}
+
 .card:hover .skillName {
   opacity: 0;
-  transform: translateY(10px);
 }
 
-/* اسکرول حرفه‌ای */
-.hoverText::-webkit-scrollbar {
-  width: 5px;
+.hoverContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  text-align: left;
+  opacity: 0;                 /* مهم */
+  pointer-events: none;       /* اضافه شود */
+  z-index: 2;
+  transition: opacity 0.3s ease;
 }
 
-.hoverText::-webkit-scrollbar-track {
-  background: transparent;
+.card:hover .hoverContent {
+  opacity: 1;
 }
 
-.hoverText::-webkit-scrollbar-thumb {
-  background: #9747FF;
-  border-radius: 6px;
+.hoverIntro {     /* مربوط به How I used this skills */
+  margin: 0 0 8px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: left;
+  
+  font-family: Quicksand;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 120%;
+  letter-spacing: 0%;
 }
 
-.hoverText::-webkit-scrollbar-thumb:hover {
-  background: #b07cff;
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-

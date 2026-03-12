@@ -1,35 +1,66 @@
 .header {
   position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  height: 80px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 120px;
+  max-width: 1440px;
+  height: 109px;
   background: #266AD9;
   z-index: 1000;
-
-  transition: transform 0.3s ease;
 }
 
 .show {
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .hide {
-  transform: translateY(-100%);
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 50px 106px 30px 120px;
 }
 
 .nav {
+  width: 657px;
+  height: 29px;
+
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
 }
 
-.nav a {
-  color: white;
+.link {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
   text-decoration: none;
-  font-weight: 600;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.link:visited,
+.link:active {
+  color: #FFFFFF;
+}
+
+.link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.pageWrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }

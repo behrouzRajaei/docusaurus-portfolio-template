@@ -1,11 +1,10 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import {config as dotenvconfig}  from "dotenv";
+import {config as dotenvconfig} from "dotenv";
 
 dotenvconfig();
 
-/* TODO: change to read configuration from environment */
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
@@ -13,25 +12,23 @@ const config: Config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: "https://behrouzrajaei.github.io",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/docusaurus-portfolio-template/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: process.env.GITHUB_ORG, // Usually your GitHub org/user name.
-  projectName: process.env.GITHUB_PROJECT, // Usually your repo name.
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap',
+      type: 'text/css',
+    },
+  ],
 
+  organizationName: process.env.GITHUB_ORG,
+  projectName: process.env.GITHUB_PROJECT,
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -42,29 +39,28 @@ const config: Config = {
       'classic',
       {
         docs: {
+          path: 'docs',
+          routeBasePath: 'documentation',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/spmse/dev-blog-template',
+          sidebarCollapsible: false,
+          sidebarCollapsed: true,
+          editUrl: 'https://github.com/spmse/dev-blog-template',
         },
-        blog: blogEnabled ? 
-          {
-            showReadingTime: true,
-            feedOptions: {
-              type: ['rss', 'atom'],
-              xslt: true,
-            },
-            // Please change this to your repo.
-            // Remove this to remove the "edit this page" links.
-            editUrl:
-              'https://github.com/spmse/dev-blog-template',
-            // Useful options to enforce blogging best practices
-            onInlineTags: 'warn',
-            onInlineAuthors: 'warn',
-            onUntruncatedBlogPosts: 'warn',
-          }
+
+        blog: blogEnabled
+          ? {
+              showReadingTime: true,
+              feedOptions: {
+                type: ['rss', 'atom'],
+                xslt: true,
+              },
+              editUrl: 'https://github.com/spmse/dev-blog-template',
+              onInlineTags: 'warn',
+              onInlineAuthors: 'warn',
+              onUntruncatedBlogPosts: 'warn',
+            }
           : false,
+
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,18 +68,31 @@ const config: Config = {
     ],
   ],
 
-themeConfig: {
-// Replace with your project's social card
-  image: 'img/docusaurus-social-card.jpg',
-  colorMode: {
-    disableSwitch: true,
-  },
-  prism: {
-    theme: prismThemes.github,
-    darkTheme: prismThemes.dracula,
-    additionalLanguages: ['powershell', 'hcl'],
-    magicComments: [
- //     Remember to extend the default highlight class name as well!
+  themeConfig: {
+    image: 'img/docusaurus-social-card.jpg',
+
+    navbar: {
+      title: '',
+      items: [
+        {
+          to: '/documentation',
+          label: 'Docs',
+          position: 'left',
+        },
+      ],
+    },
+
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: ['powershell', 'hcl'],
+      magicComments: [
         {
           className: 'theme-code-block-highlighted-line',
           line: 'highlight-next-line',
@@ -95,18 +104,20 @@ themeConfig: {
         },
       ],
     },
-   } satisfies Preset.ThemeConfig,
- };
-
+  } satisfies Preset.ThemeConfig,
+};
 
 if (blogEnabled) {
-  (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
-  (
-  config.themeConfig.footer as any
- ).links[2].items.push({
- to: '/blog',
-  label: 'Blog',
- });
- }
+  (config.themeConfig.navbar as any).items.push({
+    to: '/blog',
+    label: 'Blog',
+    position: 'left',
+  });
+
+  (config.themeConfig.footer as any).links[2].items.push({
+    to: '/blog',
+    label: 'Blog',
+  });
+}
 
 export default config;

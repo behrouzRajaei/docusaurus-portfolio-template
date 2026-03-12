@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  height: 400px;
+  height: 357px;
   padding: 72px 120px;
   background: #262E34;
   display: flex;
@@ -9,91 +9,98 @@
 
 .wrapper {
   width: 1200px;
+  height: 213px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 40px;
 }
 
 /* HEADLINE */
 .headlineRow {
+  width: 1200px;
+  height: 63px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 280px;
 }
 
 .title {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand";
   font-size: 64px;
   font-weight: 700;
   color: #FFFFFF;
 }
 
 .subtitle {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand";
   font-size: 24px;
   font-weight: 500;
   color: #FFFFFF;
+  margin-top: 36px;
+  margin-left: 120px;
 }
 
 /* CONTENT */
 .contentRow {
+  width: 1004px;
+  height: 110px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-between;
+  gap: 120px;
 }
 
 /* TEXT */
 .text {
   width: 706px;
+  height: 110px;
 }
 
 .text p {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 120%;
   text-align: justify;
   color: #FFFFFF;
+  cursor: default;
 }
 
 /* CONTACTS */
 .contacts {
   width: 248px;
+  height: 88px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-left: 36px;
 }
 
 /* Mail */
 .contactItem {
+  width: 248px;
+  height: 32px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  cursor: pointer;
 }
 
-.iconBox {
-  width: 28px;
-  height: 28px;
-  background: #266AD9;
-  border-radius: 0%;
-  border: 1px solid #FFFFFF;
+.icon {
+  width: 32;
+  height: 32;
+  angle: 0 deg;
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  cursor: default;
 }
 
-.iconCircle {
-  width: 28px;
-  height: 28px;
-  border-radius: 0%;
-  background: #266AD9;
-  border: 1px solid #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
+.icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .contactItem span,
@@ -103,9 +110,38 @@
   font-weight: 500;
   color: #FFFFFF;
   text-decoration: none;
+  line-height: 120%;
+  white-space: nowrap;
+  cursor: default;
 }
 
 .contactItem a {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
+.iconBox img,
+.iconCircle img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.linkText {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: underline;
+  line-height: 120%;
+  cursor: pointer;
+}
+
+.contacts {
+  align-self: flex-start;
+}
+
+.contactItem:hover img {
+  filter: brightness(1.4);
+}

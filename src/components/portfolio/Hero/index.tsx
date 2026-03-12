@@ -4,22 +4,15 @@ import HeroImage from '/img/profile.png';
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <div className={styles.content}>
 
         <div className={styles.textBlock}>
-
-          <p className={styles.titleLine1}>
-            Hey there. 👋 I am
-          </p>
-
-          <h1 className={styles.name}>
-            Behrouz Rajaei
-          </h1>
-
-          <p className={styles.subtitle}>
-            DevSecOps Engineer
-          </p>
+          <div className={styles.textGroup}>
+            <p className={styles.titleLine1}>Hey there. 👋 I am</p>
+            <h1 className={styles.name}>Behrouz Rajaei</h1>
+            <p className={styles.subtitle}>DevSecOps Engineer</p>
+          </div>
 
           <p className={styles.description}>
             I am a passionate DevSecOps Engineer with experience in designing and

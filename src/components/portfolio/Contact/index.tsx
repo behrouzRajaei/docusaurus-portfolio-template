@@ -39,10 +39,10 @@ export default function Contact() {
           <div className={styles.contacts}>
 
             <div className={styles.contactItem}>
-              <div className={styles.iconBox}>
+              <div className={styles.icon}>
                 
                 <img
-                  src={`${baseUrl}img/contact/mail.svg`}
+                  src={`${baseUrl}img/contact/email1.svg`}
                   alt="mail"
                 />
               </div>
@@ -50,9 +50,9 @@ export default function Contact() {
             </div>
 
             <div className={styles.contactItem}>
-              <div className={styles.iconCircle}>
+              <div className={styles.icon}>
                 <img
-                  src={`${baseUrl}img/contact/linkedin.svg`}
+                  src={`${baseUrl}img/contact/linkedln1.svg`}
                   alt="linkedin"
                 />
               </div>
@@ -62,7 +62,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className={styles.linkText}
               >
-                LinkedIn Profile
+                Profile Page
               </a>
             </div>
 

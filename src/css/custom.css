@@ -1,10 +1,9 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global Styles
  */
 
-/* You can override the default Infima variables here. */
+/* ---------- Theme Colors ---------- */
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -13,11 +12,15 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-background-color: #0F1113;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ---------- Dark Mode ---------- */
+
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
@@ -26,5 +29,78 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Background ---------- */
+
+html,
+body,
+#__docusaurus,
+.main-wrapper {
+  background-color: #0F1113;
+}
+
+/* ---------- Smooth Scroll ---------- */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px;
+}
+
+section {
+  scroll-margin-top: 0px;
+}
+
+.main-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.pageWrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  caret-color: transparent;
+}
+
+.navbar {
+  display: none !important;
+}
+
+.theme-doc-markdown {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.theme-doc-sidebar-container {
+  display: none;
+}
+
+.col.col--9 {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+/* Hide docs sidebar */
+.theme-doc-sidebar-container {
+  display: none !important;
+}
+
+.col.col--3 {
+  display: none !important;
+}
+
+.col.col--9 {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+/* center documentation content */
+.theme-doc-markdown {
+  max-width: 900px;
+  margin: 0 auto;
 }

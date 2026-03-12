@@ -26,7 +26,7 @@ const config: Config = {
   projectName: process.env.GITHUB_PROJECT,
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {

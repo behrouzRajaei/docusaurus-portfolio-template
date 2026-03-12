@@ -249,7 +249,6 @@ docker logs -f mc-server
 ## 10. License
 
 This project is licensed under the **MIT License**.
-See the [LICENSE](LICENSE) file for details.
 You are free to use, modify, and distribute this project for educational and personal purposes.
 
 > This README and repository are structured to provide a clean, technical, and professional setup for a Dockerized Minecraft server, suitable for GitHub or GitLab.

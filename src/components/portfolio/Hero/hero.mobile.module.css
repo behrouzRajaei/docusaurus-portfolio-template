@@ -1,0 +1,128 @@
+/* ================= SECTION ================= */
+
+.mh2_section {
+  width: 100%;
+  min-height: 823px;
+  background: #266AD9;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= CONTAINER ================= */
+
+.mh2_container {
+  width: 100%;
+  max-width: 390px;
+
+  padding: 97px 29px 40px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ================= TEXT BLOCK ================= */
+
+.mh2_textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: default;
+}
+
+/* ================= TITLES ================= */
+
+.mh2_titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.mh2_titleLine1 {
+  font-family: 'Quicksand';
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.mh2_name {
+  white-space: nowrap;
+  font-family: 'Quicksand';
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 100%;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.mh2_subtitle {
+  font-family: 'Quicksand';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #FFFFFF;
+  margin-top: 6px;
+}
+
+/* ================= IMAGE ================= */
+
+.mh2_image {
+  width: 100%;
+  height: 330px;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.mh2_desc {
+  font-family: 'Quicksand';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-align: justify;
+}
+
+/* ================= BUTTON ================= */
+
+.mh2_button {
+  width: 129px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #FFFFFF;
+  color: #266AD9;
+
+  border-radius: 30px;
+  text-decoration: none;
+
+  font-family: 'Quicksand';
+  font-size: 16px;
+  font-weight: 600;
+
+  align-self: center;
+
+  transition: background 0.2s ease;
+}
+
+.mh2_button:hover {
+  background: #EAF2FF;
+}
+
+/* جلوگیری از تغییر رنگ لینک */
+
+.mh2_button,
+.mh2_button:visited,
+.mh2_button:hover,
+.mh2_button:active {
+  text-decoration: none;
+  color: #266AD9;
+}

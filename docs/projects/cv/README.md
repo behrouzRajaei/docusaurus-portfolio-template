@@ -9,6 +9,15 @@ slug: /projects/cv
 
 ## Checklist
 
+
+
+
+### The documentation related to this project will be provided soon.
+
+
+
+
+
 See the project checklist:
 
 [Project Checklist](./CHECKLIST.md)

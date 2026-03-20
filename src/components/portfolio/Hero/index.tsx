@@ -1,38 +1,27 @@
-import React from 'react';
-import styles from './hero.module.css';
-import HeroImage from '/img/profile.png';
+import React, { useEffect, useState } from "react";
+
+import DesktopHero from "./desktop";
+import MobileHero from "./mobile";
 
 export default function Hero() {
-  return (
-    <section id="hero" className={styles.hero}>
-      <div className={styles.content}>
 
-        <div className={styles.textBlock}>
-          <div className={styles.textGroup}>
-            <p className={styles.titleLine1}>Hey there. 👋 I am</p>
-            <h1 className={styles.name}>Behrouz Rajaei</h1>
-            <p className={styles.subtitle}>DevSecOps Engineer</p>
-          </div>
+  const [isMobile, setIsMobile] = useState(false);
 
-          <p className={styles.description}>
-            I am a passionate DevSecOps Engineer with experience in designing and
-            maintaining secure, scalable, and high-performance systems.
-            I constantly explore new technologies, automate workflows,
-            and implement best practices to ensure reliability and security
-            in modern CI/CD pipelines and cloud infrastructures.
-          </p>
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
 
-          <a href="#contact" className={styles.button}>
-            Contact me
-          </a>
+    const handleChange = () => {
+      setIsMobile(media.matches);
+    };
 
-        </div>
+    handleChange();
 
-        <div className={styles.imageBlock}>
-          <img src={HeroImage} alt="Behrouz Rajaei" />
-        </div>
+    media.addEventListener("change", handleChange);
 
-      </div>
-    </section>
-  );
+    return () => {
+      media.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  return isMobile ? <MobileHero /> : <DesktopHero />;
 }

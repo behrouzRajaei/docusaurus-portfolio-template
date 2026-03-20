@@ -1,0 +1,176 @@
+/* ================= HEADER ================= */
+
+.mh_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 73px;
+  background: #266AD9;
+  z-index: 1000;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  padding: 33px 32px 8px 32px;
+
+  transform: translateY(0);
+}
+
+/* SHOW / HIDE ON SCROLL */
+
+.mh_show {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.mh_hide {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* ================= HAMBURGER ================= */
+
+.mh_menuButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 30px;
+  height: 22px;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.mh_menuLine {
+  width: 30px;
+  height: 2px;
+  background: #FFFFFF;
+
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+
+.mh_menuButton:hover {
+  transform: scale(1.1);
+}
+
+.mh_menuButton:hover .mh_menuLine {
+  height: 3px;
+}
+
+.mh_menuButton:hover .mh_menuLine:nth-child(2) {
+  width: 18px;
+  align-self: center;
+}
+
+/* ================= OVERLAY ================= */
+
+.mh_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 304px;
+
+  background: #FFFFFF;
+
+  padding: 24px 32px 48px 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  z-index: 2000;
+
+  animation: mh_slideDown 0.3s ease;
+}
+
+@keyframes mh_slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.mh_closeRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mh_close {
+  width: 35px;
+  height: 32px;
+  position: relative;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.mh_closeLine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 3px;
+  background: #266AD9;
+
+  transition: all 0.2s ease;
+}
+
+.mh_closeLine:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mh_closeLine:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* HOVER CLOSE */
+
+.mh_close:hover {
+  transform: scale(1.1);
+}
+
+.mh_close:hover .mh_closeLine {
+  height: 4px;
+}
+
+/* ================= MENU ================= */
+
+.mh_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 8px;
+}
+
+.mh_item {
+  font-family: 'Quicksand';
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 120%;
+  color: #266AD9;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.mh_item:hover {
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+.mh_active {
+  text-decoration: underline;
+}

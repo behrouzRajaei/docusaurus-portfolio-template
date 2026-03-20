@@ -1,170 +1,241 @@
-.skillsSection {
-  width: 1440px;
-  height: 929px;
-  padding: 72px 120px;
-  background: #1E2A34;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.skillsSection{
+width:100%;
+background:#1E2A34;
+padding:72px 0;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-.title {
-  width: 504px;
-  height: 77px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 120%;
-  letter-spacing: 0%;
-  color: #FFFFFF;
-  margin: 0;
-  margin-top: -60px;
+.title{
+width:1200px;
+font-family:'Quicksand',sans-serif;
+font-weight:700;
+font-size:64px;
+line-height:120%;
+color:#FFFFFF;
+margin-bottom:40px;
 }
 
-.section {
-  padding-top: 40px;
+/* ---------------- DESKTOP ---------------- */
+
+.groupsWrapper{
+width:1200px;
+display:flex;
+flex-direction:column;
+gap:34px;
 }
 
-.groupsWrapper {
-  width: 1199px;
-  height: 668px;
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
+.row{
+display:flex;
+gap:34px;
 }
 
-.row {
-  display: flex;
-  gap: 34px;
+.card{
+width:377px;
+height:200px;
+padding:42px 71px;
+border-radius:30px;
+background:rgba(145,201,243,0.1);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+gap:18px;
+
+position:relative;
+overflow:hidden;
+cursor:default;
+transition:background .3s ease, transform .3s ease;
 }
 
-.card {
-  width: 377px;
-  height: 200px;
-  padding: 42px 71px;
-  border-radius: 30px;
-  background: rgba(145, 201, 243, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-  transition: background 0.3s ease, transform 0.3s ease;
+.card:hover{
+background:#79B8FF80;
+transform:translateY(-6px);
 }
 
-.card:hover {
-  background: #79B8FF80;
-  transform: translateY(-6px);
+.icon{
+width:85px;
+height:85px;
+object-fit:contain;
+transition:opacity .3s ease;
 }
 
-.icon {
-  width: 85px;
-  height: 85px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  object-fit: contain;
-  object-position: center;
-
-  transform: translateY(-15px);  /* بالا آمدن آیکن */
-  z-index: 1;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.skillName{
+color:#FFFFFF;
+font-family:Quicksand;
+font-weight:500;
+font-size:18px;
+text-align:center;
+line-height:120%;
+white-space:pre-line;
+transition:opacity .3s ease;
 }
 
-.card:hover .icon {
-  opacity: 0;
+.hoverContent{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:75%;
+opacity:0;
+transition:opacity .3s ease;
+text-align:left;
 }
 
-.hoverList { /* توضیحات هر اسکیل*/
-  font-family: Quicksand;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 16px;
-  leading-trim: NONE;
-  line-height: 120%;
-  letter-spacing: 0%;
-
-  margin: 0;
-  padding-left: 18px;
-  list-style: disc;
-
-  color: #FFFFFF;
-
-  text-align: left;
+.hoverIntro{
+font-family:Quicksand;
+font-size:24px;
+font-weight:500;
+color:#FFFFFF;
+margin-bottom:8px;
 }
 
-.hoverList li {
-  margin-bottom: 6px;
+.hoverList{
+font-family:Quicksand;
+font-size:16px;
+line-height:120%;
+padding-left:18px;
+color:#FFFFFF;
 }
 
-.card:hover .hoverList {
-  opacity: 1;
+.card:hover .hoverContent{
+opacity:1;
 }
 
-.skillName {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #FFFFFF;
-  margin: 0;
-  transition: opacity 0.3s ease;
-  font-family: Quicksand;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 18px;
-  leading-trim: NONE;
-  line-height: 120%;
-  letter-spacing: 0%;
-  width: 80%;
-  text-align: center;
-  word-break: break-word;
-  z-index: 2;
-  white-space: pre-line;
+.card:hover .icon{
+opacity:0;
 }
 
-.card:hover .skillName {
-  opacity: 0;
+.card:hover .skillName{
+opacity:0;
 }
 
-.hoverContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75%;
-  text-align: left;
-  opacity: 0;                 /* مهم */
-  pointer-events: none;       /* اضافه شود */
-  z-index: 2;
-  transition: opacity 0.3s ease;
+.carousel{
+display:none;
 }
 
-.card:hover .hoverContent {
-  opacity: 1;
+.pageIndicator{
+display:none;
 }
 
-.hoverIntro {     /* مربوط به How I used this skills */
-  margin: 0 0 8px 0;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: #FFFFFF;
-  text-align: left;
-  
-  font-family: Quicksand;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 24px;
-  leading-trim: NONE;
-  line-height: 120%;
-  letter-spacing: 0%;
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:768px){
+
+.groupsWrapper{
+display:none;
 }
 
-.icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.carousel{
+display:flex;
+}
+
+.pageIndicator{
+display:flex;
+}
+
+.title{
+width:100%;
+font-size:40px;
+padding-left:48px;
+margin-bottom:48px;
+}
+
+.carousel{
+display:flex;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+scroll-behavior:smooth;
+}
+
+.slide{
+min-width:100%;
+display:flex;
+justify-content:center;;
+scroll-snap-align:start;
+padding-left:0px;
+}
+
+.mobileCard{
+width:340px;
+height:388px;
+background:#266AD91A;
+border-radius:30px;
+padding:16px 12px;
+display:flex;
+flex-direction:column;
+gap:16px;
+margin-right: 8px;
+margin-left: 12px;
+}
+
+.skillRow{
+display:grid;
+grid-template-columns:60px 1fr;
+column-gap:16px;
+align-items:start;
+}
+
+.iconColumn{
+width:70px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.mobileIcon{
+width:45px;
+height:45px;
+object-fit:contain;
+margin-bottom:8px;
+margin-top: 8px;
+
+}
+
+.mobileName{
+font-family:Quicksand;
+font-size:15px;
+font-weight:500;
+text-align:center;
+line-height:1.1;
+}
+
+.mobileList{
+font-family:Quicksand;
+font-size:15px;
+line-height:120%;
+padding-left:12px;
+padding-right: 8px;
+margin:0;
+display:flex;
+flex-direction:column;
+gap:4px;
+color:white;
+}
+
+/* indicator */
+
+.pageIndicator{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:16px;
+}
+
+.dot{
+width:10px;
+height:10px;
+background:#738398;
+border-radius:50px;
+}
+
+.activeDot{
+width:18px;
+height:10px;
+background:white;
+}
+
 }

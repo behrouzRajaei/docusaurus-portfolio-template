@@ -1,74 +1,26 @@
-import React from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import styles from "./contact.module.css";
+import React, { useEffect, useState } from "react";
+
+import DesktopContact from "./desktop";
+import MobileContact from "./mobile";
 
 export default function Contact() {
-  const baseUrl = useBaseUrl("/");
 
-  return (
-    <section id="contact" className={styles.section}>
-      <div className={styles.wrapper}>
+  const [isMobile, setIsMobile] = useState(false);
 
-        {/* HEADLINE */}
-        <div className={styles.headlineRow}>
-          <h2 className={styles.title}>Contact me</h2>
-          <p className={styles.subtitle}>
-            Looking forward to hearing from you!
-          </p>
-        </div>
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
 
-        {/* CONTENT */}
-        <div className={styles.contentRow}>
+    const handleChange = () => {
+      setIsMobile(media.matches);
+    };
 
-          {/* TEXT */}
-          <div className={styles.text}>
-            <p>
-              Feel free to reach out with job offers or exciting opportunities.
-              I am currently looking for a DevOps or DevSecOps role where I can
-              contribute to building secure, scalable, and automated
-              infrastructure solutions.
-              I enjoy working in collaborative environments where continuous
-              improvement, automation, and security best practices are part of
-              the culture.
-              I am open to remote work and also willing to relocate for the
-              right opportunity. Let’s build something great together.
-            </p>
-          </div>
+    handleChange();
+    media.addEventListener("change", handleChange);
 
-          {/* CONTACT LINKS */}
-          <div className={styles.contacts}>
+    return () => {
+      media.removeEventListener("change", handleChange);
+    };
+  }, []);
 
-            <div className={styles.contactItem}>
-              <div className={styles.icon}>
-                
-                <img
-                  src={`${baseUrl}img/contact/email1.svg`}
-                  alt="mail"
-                />
-              </div>
-              <span>bmd.rajaei@mail.de</span>
-            </div>
-
-            <div className={styles.contactItem}>
-              <div className={styles.icon}>
-                <img
-                  src={`${baseUrl}img/contact/linkedln1.svg`}
-                  alt="linkedin"
-                />
-              </div>
-              <a
-                href="https://www.linkedin.com/in/behrouz-rajaei/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.linkText}
-              >
-                Profile Page
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return isMobile ? <MobileContact /> : <DesktopContact />;
 }

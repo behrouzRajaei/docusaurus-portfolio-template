@@ -1,0 +1,166 @@
+.mh3_section {
+  width: 100%;
+  overflow: hidden;
+
+  padding-top: 48px;
+  padding-bottom: 32px;
+
+  background: #262E34;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* HEADER */
+.mh3_header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mh3_title {
+  width: 340px;
+
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 110%;
+
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* SLIDER */
+.mh3_slider {
+  display: flex;
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.mh3_slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* SLIDE */
+.mh3_slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  scroll-snap-align: center;
+}
+
+/* CARD CONTAINER */
+.mh3_slideContent {
+  width: 340px;
+  height: 532px;
+
+  background: rgba(38, 106, 217, 0.18); /* بهتر از فیگما برای دید */
+
+  border-radius: 30px;
+
+  padding: 24px 10px 16px 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap:20px;
+
+  overflow: hidden;
+}
+
+/* CARD */
+.mh3_card {
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ROW */
+.mh3_cardRow {
+  display: flex;
+  gap: 18px;
+
+  align-items: center;
+}
+
+/* ICON */
+.mh3_iconBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+  min-width: 60px;
+}
+
+.mh3_iconBox img {
+  width: 44px;
+  height: 50px;
+}
+
+.mh3_iconBox span {
+  font-family: 'Quicksand';
+  font-size: 16px;
+  color: #FFFFFF;
+
+  text-align: center;
+
+  white-space: pre-line;
+  line-height: 100%;
+}
+
+/* TEXT */
+.mh3_text {
+  margin: 1px;
+  padding-left: 12px;
+
+  font-family: 'Quicksand';
+  font-size: 16px;
+  line-height: 112%;
+
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.mh3_text li {
+  margin-bottom: 8px;
+}
+
+/* DOTS */
+.mh3_dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* پایه */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #738398;
+
+  transition: all 0.3s ease;
+}
+
+/* فعال */
+.activeDot {
+  width: 24px;
+  height: 10px;
+  border-radius: 50px;
+  background: #FFFFFF;
+}

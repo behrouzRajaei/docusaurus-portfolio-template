@@ -1,0 +1,107 @@
+/* ================= SECTION ================= */
+
+.mf_section {
+  width: 100%;
+  padding: 16px 0 55px 0;
+  background: #262E34;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+/* ================= ARROW BUTTON ================= */
+
+.mf_arrowButton {
+  width: 42px;
+  height: 88px;
+
+  padding: 0;
+  border: none;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+/* SVG ICON */
+
+.mf_arrowIcon {
+  width: 42px;
+  height: 88px;
+}
+
+/* SVG PARTS */
+
+.mf_arrowBorder {
+  stroke: white;
+  fill: transparent;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.mf_arrowPath {
+  fill: white;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+
+.mf_arrowButton:hover .mf_arrowBorder {
+  fill: rgba(248, 245, 236, 0.2);
+}
+
+.mf_arrowButton:hover .mf_arrowPath {
+  fill: white;
+}
+
+/* ================= BOTTOM ================= */
+
+.mf_bottom {
+  width: 100%;
+  max-width: 390px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  padding: 0 24px;
+}
+
+/* COPYRIGHT */
+
+.mf_copy {
+  font-family: 'Quicksand';
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+}
+
+/* LEGAL */
+
+.mf_legal,
+.mf_legal:visited,
+.mf_legal:active {
+  color: #FFFFFF;
+  font-family: 'Quicksand';
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+}
+
+/* HOVER */
+
+.mf_legal:hover {
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: underline;
+}

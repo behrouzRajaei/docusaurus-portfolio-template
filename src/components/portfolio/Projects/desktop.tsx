@@ -73,7 +73,7 @@ const projects = [
     description:
       "Automated CI/CD pipeline for deploying a containerized application using GitHub Actions. The workflow builds, tests, and deploys Docker images automatically, demonstrating DevOps practices that improve deployment reliability and reduce manual operations.",
     documentation: "documentation/projects/conduit-deployment",
-    github: "https://github.com/behrouzRajaei/Conduit-Deployme"
+    github: "https://github.com/behrouzRajaei/conduit-container/tree/deployment-clean"
   },
 
   {
@@ -84,7 +84,7 @@ const projects = [
     description:
       "Personal developer portfolio built with Docusaurus to present projects, documentation, and DevOps experience. The site combines structured documentation with a responsive interface to showcase technical work and development practices.",
     documentation: "documentation/projects/docusaurus-portfolio",
-    github: "https://github.com/behrouzRajaei/docusaurus-portf"
+    github: "https://github.com/behrouzRajaei/docusaurus-portfolio-template"
   },
   {
     name: "CV",
@@ -93,7 +93,7 @@ const projects = [
     description:
       "Responsive personal CV website created using HTML and CSS to present professional experience, projects, and technical skills. The project focuses on clean layout design, structured content presentation, and responsive styling for different screen sizes.",
     documentation: "documentation/projects/cv",
-    github: "https://github.com/behrouzRajaei/cv"
+    github: "https://docs.google.com/document/d/1g_57geVNV3vm5TpD7FHu0H346SFVQBf45RL1Slfyef0/edit?tab=t.0#heading=h.gjdgxs"
   }
 ];
 
